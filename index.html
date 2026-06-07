@@ -13,21 +13,27 @@
     <h2>Weather App</h2>
 
 
-    <div class="search-box">
-      <input type="text" id="cityInput" placeholder="Enter City Name">
-      <button id="searchBtn">🔍</button>
+    <input type="text" id="cityInput" placeholder="Enter city name">
+
+        <img id="weatherIcon" src="" width="100" style="display:none;">
+
+
+
+
+        
+        <button onclick="getWeather()">Search</button>
+
+
+
+
+        <div class="result">
+    <p>City: <span id="cityName">--</span></p>
+    <p>Temperature: <span id="temperature">--</span></p>
+    <p>Condition: <span id="condition">--</span></p>
+</div>
+
+
     </div>
-
-
-    <div class="weather-result">
-      <!-- Weather details will come here -->
-      <p class="temp">--°C</p>
-      <p class="city">City Name</p>
-      <p class="condition">Condition</p>
-    </div>
-
-
-  </div>
 
 
 <script src="script.js"></script>

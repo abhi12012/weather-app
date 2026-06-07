@@ -1,40 +1,35 @@
 const apiKey = "YOUR_API_KEY";
 
-const cityInput = document.getElementById("cityInput");
-const searchBtn = document.getElementById("searchBtn");
+async function getWeather() {
+    let city = document.getElementById("cityInput").value;
 
 
-const tempEl = document.querySelector(".temp");
-const cityEl = document.querySelector(".city");
-const conditionEl = document.querySelector(".condition");
+    if (city === "") {
+        alert("Please enter a city name");
+        return;
+    }
 
 
-searchBtn.addEventListener("click", () => {
-  const cityName = cityInput.value;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 
-  if(cityName === "") {
-    alert("Please enter a city name!");
-    return;
-  }
+    let response = await fetch(url);
+    let data = await response.json();
 
 
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data); // For testing
+    document.getElementById("cityName").textContent = data.name;
+    document.getElementById("temperature").textContent = data.main.temp + "°C";
+    document.getElementById("condition").textContent = data.weather[0].main;
 
 
-      tempEl.textContent = Math.round(data.main.temp) + "°C";
-      cityEl.textContent = data.name;
-      conditionEl.textContent = data.weather[0].main;
-    })
-    .catch(error => {
-      alert("City not found!");
-      console.error(error);
-    });
-});
+    let iconCode = data.weather[0].icon;
+let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
+
+let img = document.getElementById("weatherIcon");
+img.src = iconUrl;
+img.style.display = "block";
+}
 
 
 

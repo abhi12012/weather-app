@@ -15,3 +15,7 @@ A simple weather application UI built using HTML and CSS.
 ## Status
 - UI completed
 - API integration pending
+
+
+## 📌 How it works
+User enters a city name → App fetches weather data → Displays temperature and condition.

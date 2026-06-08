@@ -2,43 +2,46 @@
 
 # 🌦 Advanced Weather App
 
-A modern and responsive Weather App built using HTML, CSS, and JavaScript with OpenWeather API.
+A modern Weather Application built using HTML, CSS, and JavaScript with OpenWeather API.  
+It provides real-time weather data by city name and also supports user location-based weather.
 
 ---
 
 ## 🚀 Features
 
-- 🔍 Search weather by city name
-- 🌡 Real-time temperature
-- ☁ Weather condition with icon
+- 🌍 Search weather by city name
+- 📍 Get weather using current location
+- 🌡 Real-time temperature display
+- ☁ Weather condition with icons
 - 💧 Humidity information
 - 🌬 Wind speed (km/h)
 - 🌡 Feels like temperature
-- 🕒 Local city time & date
-- ⏳ Loading animation while fetching data
-- ❌ Error handling (invalid city / empty input)
-- 🎨 Modern glassmorphism UI design
+- 🕒 Local city date & time
+- ⏳ Loader animation during API fetch
+- ❌ Error handling (invalid city / location denied)
+- 📱 Responsive and clean UI
 
 ---
 
-## 🆕 Upgrades from previous version
+## 🆕 Major Upgrades
 
-### Old Version:
-- Basic weather data only
-- Simple UI
+Compared to basic weather app:
+
+### ❌ Old Version:
+- Only city weather search
+- Basic UI
 - No error handling
+- No location support
 - No loading state
-- No time or advanced details
 
-### New Version:
-- ✔ Added loader system
-- ✔ Added input validation
-- ✔ Added error handling
-- ✔ Added weather icon support
-- ✔ Added advanced weather details
-- ✔ Added local time & date feature
-- ✔ Improved UI design (glassmorphism style)
-- ✔ Better user experience
+### ✔ New Version:
+- City + Location based weather
+- Loader system added
+- Better error handling
+- Time & Date feature added
+- Weather icons added
+- Improved UI/UX
+- Better user experience
 
 ---
 
@@ -53,10 +56,12 @@ A modern and responsive Weather App built using HTML, CSS, and JavaScript with O
 
 ## 🔑 API Key Setup
 
-You must add your OpenWeather API key:
+This project uses OpenWeather API.
+
+👉 Get your API key from:
+https://openweathermap.org/api
+
+Then replace in code:
 
 ```js
-const apiKey = "YOUR_API_KEY";
-
-👉 Get API key from:
-https://openweathermap.org/api
+const apiKey = "YOUR_API_KEY_HERE";

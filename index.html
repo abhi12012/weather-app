@@ -10,12 +10,17 @@
 
 
   
+<div class="weather-box">
+    <h2>Weather App</h2>
+   
 
-    <div class="weather-box">
-        <h2>Weather App</h2>
+
+    <button id="locationBtn" onclick="getMyLocation()">📍 My Location Weather</button>
 
 
-        <input type="text" id="cityInput" placeholder="Enter city name">
+    <input type="text" id="cityInput" placeholder="Enter city name">
+     
+    <button id="locationBtn" onclick="getMyLocation()">📍 My Location Weather</button>
 
 
     <button id="searchBtn" onclick="getWeather()">Search</button>
@@ -41,8 +46,9 @@
         <p>Wind: <span id="wind">--</span> km/h</p>
         <p>Date: <span id="date">--</span></p>
         <p>Local Time: <span id="localTime">--</span></p>
-    </div>  
+    </div>
 </div>
+
 
 <script src="script.js"></script>
 </body>

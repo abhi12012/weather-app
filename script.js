@@ -1,4 +1,4 @@
-const apiKey = "YOUR_API_KEY";
+const apiKey = "YOUR_API_KEY_HERE";
 
 
 async function getWeather() {
@@ -15,14 +15,7 @@ async function getWeather() {
     }
 
 
-    error.style.display = "none";
-
-
-    // Show loader + disable button
-    loader.style.display = "block";
-    button.disabled = true;
-    button.textContent = "Loading...";
-
+   
 
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -105,6 +98,100 @@ document.getElementById("localTime").textContent =
     loader.style.display = "none";
     button.disabled = false;
     button.textContent = "Search";
+}
+
+
+function getMyLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        alert("Your browser does not support Geolocation 😢");
+    }
+}
+
+
+function showPosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+
+
+    getWeatherByCoords(lat, lon);
+}
+
+
+async function getWeatherByCoords(lat, lon) {
+    let error = document.getElementById("error");
+    let loader = document.getElementById("loader");
+    let button = document.getElementById("locationBtn");
+
+
+    loader.style.display = "block";
+    button.disabled = true;
+    button.textContent = "Loading...";
+
+
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+
+    try {
+        let response = await fetch(url);
+        let data = await response.json();
+
+
+        // Fill data same as getWeather()
+        document.getElementById("cityName").textContent = data.name;
+        document.getElementById("temperature").textContent = data.main.temp + "°C";
+        document.getElementById("condition").textContent = data.weather[0].main;
+
+
+        // ICON
+        let iconCode = data.weather[0].icon;
+        document.getElementById("weatherIcon").src =
+            `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+        document.getElementById("weatherIcon").style.display = "block";
+
+
+        // Advanced details
+        document.getElementById("feelsLike").textContent = data.main.feels_like;
+        document.getElementById("humidity").textContent = data.main.humidity;
+        document.getElementById("wind").textContent = (data.wind.speed * 3.6).toFixed(1);
+
+
+        // DATE & TIME
+        let timezoneOffset = data.timezone;
+        let localDate = new Date(Date.now() + timezoneOffset * 1000);
+
+
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+
+        document.getElementById("date").textContent =
+            days[localDate.getUTCDay()] + ", " +
+            localDate.getUTCDate() + "-" +
+            (localDate.getUTCMonth() + 1) + "-" +
+            localDate.getUTCFullYear();
+
+
+        document.getElementById("localTime").textContent =
+            localDate.getUTCHours().toString().padStart(2, "0") + ":" +
+            localDate.getUTCMinutes().toString().padStart(2, "0") + ":" +
+            localDate.getUTCSeconds().toString().padStart(2, "0");
+
+
+    } catch (err) {
+        error.textContent = "Unable to get your location weather 😢";
+        error.style.display = "block";
+    }
+
+
+    loader.style.display = "none";
+    button.disabled = false;
+    button.textContent = "📍 My Location Weather";
+}
+
+
+function showError(error) {
+    alert("Location access denied ❌ Please allow location.");
 }
 
 

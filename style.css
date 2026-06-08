@@ -74,15 +74,41 @@ body {
 
 
 
+#locationBtn {
+    background: #222;
+    color: #fff;
+    margin-bottom: 12px;
+}
+#locationBtn:hover {
+    background: #444;
+}
+
+
+button:hover {
+    background: #e6e6e6;
+}
+
+
+/* --- ICON --- */
+#weatherIcon {
+    width: 120px;
+    display: none;
+    margin: 10px auto;
+}
+
+
+/* --- TEXT RESULTS --- */
 .result p {
     margin: 6px 0;
     font-size: 18px;
 }
 
 
-
+/* --- LOADER --- */
 #loader img {
     width: 45px;
 }
+
+
 
 

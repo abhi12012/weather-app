@@ -12,6 +12,12 @@ A simple weather application UI built using HTML and CSS.
 - Clean and responsive UI
 
 
+## ⚙️ Error Handling
+- Shows error if input is empty
+- Handles invalid city names
+- Uses try-catch for API failures
+- Clears old data when error occurs
+
 ## 🔧 Tech Stack
 - HTML
 - CSS
@@ -22,10 +28,10 @@ A simple weather application UI built using HTML and CSS.
 This project uses OpenWeather API to fetch real-time weather data.
 
 ## 📌 How it works
-User enters city name → API fetches live data → Weather details are displayed
+User enters city → API request → Data fetched → UI updates dynamically
 
 ## 🔑 Note
-You need an OpenWeather API key to run this project locally.
+You must add your own OpenWeather API key in the script file.
 
 ## 👨‍💻 Author
 Abhishek Bansal

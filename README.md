@@ -2,61 +2,61 @@
 
 # 🌦 Advanced Weather App
 
-A modern Weather Application built using HTML, CSS, and JavaScript with OpenWeather API.
+A modern and responsive Weather App built using HTML, CSS, and JavaScript with OpenWeather API.
 
 ---
 
-## 🚀 Features (New Upgrade Version)
+## 🚀 Features
 
 - 🔍 Search weather by city name
-- 🌡 Real-time temperature display
+- 🌡 Real-time temperature
 - ☁ Weather condition with icon
-- 🤩 Feels like temperature
-- 💧 Humidity details
-- 💨 Wind speed (km/h)
-- ⚠ Input validation (empty city check)
-- ❌ Error handling (wrong city / API failure)
-- ⏳ Loader system for better UX
-- 🔒 Button disable during loading (prevents multiple requests)
+- 💧 Humidity information
+- 🌬 Wind speed (km/h)
+- 🌡 Feels like temperature
+- 🕒 Local city time & date
+- ⏳ Loading animation while fetching data
+- ❌ Error handling (invalid city / empty input)
+- 🎨 Modern glassmorphism UI design
 
 ---
 
-## 🆕 What is upgraded from previous version?
+## 🆕 Upgrades from previous version
 
 ### Old Version:
 - Basic weather data only
+- Simple UI
 - No error handling
-- No loader
-- App could break on wrong input
+- No loading state
+- No time or advanced details
 
 ### New Version:
-- ✔ Added try-catch error handling
-- ✔ Proper user-friendly error messages
-- ✔ Loader animation during API call
-- ✔ Input validation added
-- ✔ Better UI state management
-- ✔ Improved user experience
-- ✔ More weather details (humidity, wind, feels like)
+- ✔ Added loader system
+- ✔ Added input validation
+- ✔ Added error handling
+- ✔ Added weather icon support
+- ✔ Added advanced weather details
+- ✔ Added local time & date feature
+- ✔ Improved UI design (glassmorphism style)
+- ✔ Better user experience
 
 ---
 
 ## ⚙ Tech Stack
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript (ES6)
 - OpenWeather API
 
 ---
 
-## 📡 API Used
+## 🔑 API Key Setup
 
-OpenWeather API is used to fetch real-time weather data.
+You must add your OpenWeather API key:
 
----
-
-## 🔑 Important Note
-
-- You must add your own OpenWeather API key in the script file:
 ```js
 const apiKey = "YOUR_API_KEY";
+
+👉 Get API key from:
+https://openweathermap.org/api

@@ -12,59 +12,56 @@
   
 
     <div class="weather-box">
-        <h2>Weather App</h2>
-
-
-        <input type="text" id="cityInput" placeholder="Enter city name">
-        <img id="weatherIcon" src="" width="100" style="display:none;">
-
-
-        <div id="loader" style="display:none; margin-top: 10px;">
-        <img src="https://i.gifer.com/ZZ5H.gif" width="50">
-     </div>
+    <h2>Weather App</h2>
 
 
 
 
-        <p id="error" style="color: red; display:none; font-size: 18px; margin-top: 10px;"></p>
+    <input type="text" id="cityInput" placeholder="Enter city name">
 
 
 
 
-
-
-        <!-- <button>Search</button> -->
-        <!-- <button onclick="getWeather()">Search</button> -->
-         <button id="searchBtn" onclick="getWeather()">Search</button>
+    <button id="searchBtn" onclick="getWeather()">Search</button>
 
 
 
 
+    <p id="error" style="color: red; display: none; margin-top: 10px;"></p>
 
 
 
 
-        <div class="result">
-    <p>City: <span id="cityName">--</span></p>
-    <p>Temperature: <span id="temperature">--</span></p>
-    <p>Condition: <span id="condition">--</span></p>
-
-
-    <p>Feels Like: <span id="feelsLike">--</span>°C</p>
-    <p>Humidity: <span id="humidity">--</span>%</p>
-    <p>Wind: <span id="wind">--</span> km/h</p>
-
-
-    <p>Date: <span id="date">--</span></p>
-    <p>Local Time: <span id="localTime">--</span></p>
+    <div id="loader" style="display:none;">
+        <img src="https://i.gifer.com/ZZ5H.gif">
+    </div>
 
 
 
 
+    <img id="weatherIcon">
+
+
+
+
+    <div class="result">
+        <p>City: <span id="cityName">--</span></p>
+        <p>Temperature: <span id="temperature">--</span></p>
+        <p>Condition: <span id="condition">--</span></p>
+        <p>Feels Like: <span id="feelsLike">--</span>°C</p>
+        <p>Humidity: <span id="humidity">--</span>%</p>
+        <p>Wind: <span id="wind">--</span> km/h</p>
+        <p>Date: <span id="date">--</span></p>
+        <p>Local Time: <span id="localTime">--</span></p>
+    </div>  
 </div>
 
 
-    </div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
 
 <script src="script.js"></script>
 </body>

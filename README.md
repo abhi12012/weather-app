@@ -2,33 +2,30 @@
 
 A simple weather application UI built using HTML and CSS.
 
-## Features
+## 🚀 Features
 - Search weather by city name
-- Clean and responsive UI design
-- Weather condition with icons
-- Weather display layout (temperature, city, condition)
+- Displays temperature in Celsius
+- Shows weather condition with icon
+- Feels like temperature
+- Humidity percentage
+- Wind speed (km/h)
+- Clean and responsive UI
 
-## Tech Stack
+
+## 🔧 Tech Stack
 - HTML
 - CSS
-- JavaScript (coming soon)
+- JavaScript
+- OpenWeather API
 
-## Status
-- UI completed
-- API integration pending
-
+## 📡 API Used
+This project uses OpenWeather API to fetch real-time weather data.
 
 ## 📌 How it works
-User enters city → API request → Weather data displayed on screen
+User enters city name → API fetches live data → Weather details are displayed
 
+## 🔑 Note
+You need an OpenWeather API key to run this project locally.
 
-
-## 🔑 API Key
-
-This project uses OpenWeather API to fetch live weather data.
-
-To run this project locally, you need to:
-1. Get your API key from https://openweathermap.org/
-2. Replace the API key in script.js file
-
-Note: API key is required for the app to work properly.
+## 👨‍💻 Author
+Abhishek Bansal

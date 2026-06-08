@@ -22,6 +22,9 @@ async function getWeather() {
     document.getElementById("condition").textContent = data.weather[0].main;
 
 
+   
+
+
     let iconCode = data.weather[0].icon;
 let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
@@ -29,7 +32,11 @@ let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 let img = document.getElementById("weatherIcon");
 img.src = iconUrl;
 img.style.display = "block";
+
+
+document.getElementById("feelsLike").textContent = data.main.feels_like;
+document.getElementById("humidity").textContent = data.main.humidity;
+document.getElementById("wind").textContent = (data.wind.speed * 3.6).toFixed(1); // m/s → km/h
+
+
 }
-
-
-

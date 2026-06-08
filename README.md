@@ -1,37 +1,62 @@
 # Weather App 🌦️
 
-A simple weather application UI built using HTML and CSS.
+# 🌦 Advanced Weather App
 
-## 🚀 Features
-- Search weather by city name
-- Displays temperature in Celsius
-- Shows weather condition with icon
-- Feels like temperature
-- Humidity percentage
-- Wind speed (km/h)
-- Clean and responsive UI
+A modern Weather Application built using HTML, CSS, and JavaScript with OpenWeather API.
 
+---
 
-## ⚙️ Error Handling
-- Shows error if input is empty
-- Handles invalid city names
-- Uses try-catch for API failures
-- Clears old data when error occurs
+## 🚀 Features (New Upgrade Version)
 
-## 🔧 Tech Stack
+- 🔍 Search weather by city name
+- 🌡 Real-time temperature display
+- ☁ Weather condition with icon
+- 🤩 Feels like temperature
+- 💧 Humidity details
+- 💨 Wind speed (km/h)
+- ⚠ Input validation (empty city check)
+- ❌ Error handling (wrong city / API failure)
+- ⏳ Loader system for better UX
+- 🔒 Button disable during loading (prevents multiple requests)
+
+---
+
+## 🆕 What is upgraded from previous version?
+
+### Old Version:
+- Basic weather data only
+- No error handling
+- No loader
+- App could break on wrong input
+
+### New Version:
+- ✔ Added try-catch error handling
+- ✔ Proper user-friendly error messages
+- ✔ Loader animation during API call
+- ✔ Input validation added
+- ✔ Better UI state management
+- ✔ Improved user experience
+- ✔ More weather details (humidity, wind, feels like)
+
+---
+
+## ⚙ Tech Stack
+
 - HTML
 - CSS
-- JavaScript
+- JavaScript (ES6)
 - OpenWeather API
 
+---
+
 ## 📡 API Used
-This project uses OpenWeather API to fetch real-time weather data.
 
-## 📌 How it works
-User enters city → API request → Data fetched → UI updates dynamically
+OpenWeather API is used to fetch real-time weather data.
 
-## 🔑 Note
-You must add your own OpenWeather API key in the script file.
+---
 
-## 👨‍💻 Author
-Abhishek Bansal
+## 🔑 Important Note
+
+- You must add your own OpenWeather API key in the script file:
+```js
+const apiKey = "YOUR_API_KEY";

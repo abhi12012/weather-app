@@ -1,28 +1,17 @@
 
 
 body {
-  margin: 0;
-  background: #87CEEB; /* sky blue */
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-}
-
-
-.weather-box {
-  background: #ffffffcc;
-  padding: 25px;
-  width: 300px;
-  text-align: center;
-  border-radius: 18px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-}
+            margin: 0;
+            background: #87CEEB; /* sky blue */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
 
- .weather-box {
+        .weather-box {
             background: white;
             padding: 20px;
             width: 300px;
@@ -57,5 +46,3 @@ body {
             margin-top: 20px;
             font-size: 20px;
         }
-   
-

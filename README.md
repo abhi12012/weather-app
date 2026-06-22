@@ -5,7 +5,23 @@
 A modern Weather Application built using HTML, CSS, and JavaScript with OpenWeather API.  
 It provides real-time weather data by city name and also supports user location-based weather.
 
+
 ---
+
+## 📸 Screenshot
+
+![Weather App Screenshot](screenshot.png)
+---
+
+
+
+---
+
+## 🚀 Live Demo
+
+[View Weather App](https://abhi12012.github.io/weather-app/)
+
+
 
 ## 🚀 Features
 
